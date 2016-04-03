@@ -1,0 +1,16 @@
+package ca.kitaiweb.sfstory;
+
+import android.os.Bundle;
+
+import com.badlogic.gdx.backends.android.AndroidApplication;
+import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
+import ca.kitaiweb.sfstory.SFStory;
+
+public class AndroidLauncher extends AndroidApplication {
+	@Override
+	protected void onCreate (Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
+		initialize(new SFStory(), config);
+	}
+}
